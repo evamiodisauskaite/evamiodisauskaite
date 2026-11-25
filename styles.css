@@ -513,6 +513,22 @@ h1, h2, h3, h4 {
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 54px; padding-top: 0; padding-bottom: 0; }
 .footer a:hover { text-decoration: underline; }
 
+/* ---------- RALLY 01 ---------- */
+.r-slide { overflow: hidden; border-radius: var(--radius); background: #f4f0ea; }
+.r-slide img { width: 100%; }
+.r-key { outline: 2px solid var(--orange); outline-offset: 6px; }
+.r-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 1.4vw, 20px); }
+.r-strip { display: grid; grid-template-columns: 1fr 1fr 1fr 0.9fr 1.05fr; align-items: start; gap: clamp(10px, 1vw, 14px); }
+.r-strip figure { overflow: hidden; border-radius: 16px; background: var(--bg-3); scroll-snap-align: start; }
+.r-strip img { width: 100%; }
+.r-end { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(20px, 3vw, 48px); align-items: center; margin-top: clamp(20px, 3vw, 40px); }
+.r-end > div { display: grid; gap: 18px; justify-items: start; }
+.r-note { max-width: 44ch; color: var(--muted); font-size: 14.5px; }
+.palette-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.palette-5 div { min-height: 120px; }
+.palette-5 div:nth-child(4) { box-shadow: inset 0 0 0 1px var(--line); }
+.palette-5 div:last-child { box-shadow: none; }
+
 /* ---------- reveal ---------- */
 .js .reveal { opacity: 0; transform: translateY(34px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); transition-delay: var(--d, 0s); }
 .js .reveal.in { opacity: 1; transform: none; }
@@ -530,6 +546,8 @@ h1, h2, h3, h4 {
   .fan-card { width: min(23vw, 190px); margin-left: -4vw; }
   .film-flip .film-frame { order: 0; }
   .about-main { position: static; }
+  .r-pair, .r-end { grid-template-columns: minmax(0, 1fr); }
+  .r-strip { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 42%; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
   .works { columns: 2; }
   .versions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .stage-info, .viloga-hero { grid-template-columns: minmax(0, 1fr); }
@@ -549,6 +567,7 @@ h1, h2, h3, h4 {
   .bento .b-tall { aspect-ratio: 4 / 5; }
   .palette { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .palette div { min-height: 104px; }
+  .r-strip { grid-auto-columns: 72%; }
   .cards { grid-template-columns: minmax(0, 1fr); }
   .viloga-versions { gap: 8px; }
   .viloga-versions figure { border-radius: 14px; }
